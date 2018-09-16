@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Options
+{% endblock %}
+
+{% block main %}
+    <form action="/options" method="post">
+        {% for stock in stocks %}
+            <input type="checkbox" name="{{stock.stocks}}" value="{{stock.stocks}}">{{stock.stocks}}<br>
+        {% endfor %}
+         <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+{% endblock %}

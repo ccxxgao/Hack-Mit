@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Money Briefing
+{% endblock %}
+
+{% block main %}
+    {% for stock in selected_stocks %}
+        <button class="collapsible">{{stock.selected_stocks}}: {{</button>
+        <div class="content">
+          <p>
+              {{stock.strong_buy}}
+              {{stock.buy}}
+              {{stock.hold}}
+              {{stock.sell}}
+              {{stock.strong_sell}}
+              This is a holder for the breakdown of analysts' opinions
+
+              {{stock
+              If we have time we can implement Kensho and/or Stellar
+          </p>
+        </div>
+
+    <form action="/options" method="post">
+        {% for stock in stocks %}
+            <input type="checkbox" name="{{stock.stocks}}" value="{{stock.stocks}}">{{stock.stocks}}<br>
+        {% endfor %}
+         <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+{% endblock %}
+
